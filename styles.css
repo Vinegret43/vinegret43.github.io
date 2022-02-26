@@ -178,3 +178,77 @@ ol > li::before {
     opacity: 100%;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 4vw;
+  }
+
+  li {
+    font-size: 18px;
+  }
+
+  .logo-and-name {
+    margin-top: 5px;
+  }
+
+  .logo-and-name img {
+    width: 64px;
+  }
+
+  .box {
+    width: 80vw;
+    margin-left: 5vw;
+    padding: 10px;
+  }
+
+  .box-background {
+    left: 5vw;
+  }
+
+  .contacts-grid .text {
+    font-size: 18px;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 64px auto;
+    grid-column-gap: 50px;
+    grid-row-gap: 10px;
+    align-items: center;
+  }
+
+  .contacts-grid img {
+    max-height: 40px;
+  }
+
+  /* On mobile fixed background may not work. This is the workaround */
+  body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: -2;
+    background: url("background.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  li {
+    font-size: 14px;
+  }
+
+  .contacts-grid .text {
+    font-size: 14px;
+  }
+
+  .contacts-grid img {
+    max-height: 30px;
+  }
+}
