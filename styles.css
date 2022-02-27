@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background: url("background.png") no-repeat fixed;
+  background: url("images/background.png") no-repeat fixed;
 }
 
 h1 {
@@ -85,7 +85,7 @@ ol > li::before {
   border-radius: inherit;
 
   z-index: -1;
-  background: url("background_blurred.png") no-repeat fixed;
+  background: url("images/background_blurred.png") no-repeat fixed;
 }
 
 
@@ -252,7 +252,7 @@ ol > li::before {
     width: 1920px;
     height: 1080px;
     z-index: -2;
-    background: url("background.png") no-repeat center center;
+    background: url("images/background.png") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
