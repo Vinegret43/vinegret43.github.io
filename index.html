@@ -34,18 +34,24 @@
       <div class="contacts content-box">
         <h5>Click on image to copy/open link</h5>
         <div class="grid">
-          <div class="image grow-on-hover">
-            <img title="Matrix" src="images/matrix_logo.png" onclick="navigator.clipboard.writeText('@vinegret43:matrix.org')"/>
+          <div class="image">
+            <div class="popup">Copied!</div>
+            <img class="grow-on-hover" title="Matrix" id="Matrix" src="images/matrix_logo.png"
+              onclick="copy_to_clipboard('@vinegret43:matrix.org', 'Matrix')"/>
           </div>
 
           <div class="text">@vinegret43:matrix.org</div>
-          <div class="image grow-on-hover">
-            <img title="Discord" src="images/discord_logo.png" onclick="navigator.clipboard.writeText('Vinegret43#8677')"/>
+          <div class="image">
+            <div class="popup">Copied!</div>
+            <img class="grow-on-hover" title="Discord" id="Discord" src="images/discord_logo.png"
+              onclick="copy_to_clipboard('Vinegret43#8677', 'Discord')"/>
           </div>
 
           <div class="text">Vinegret43#8677</div>
-          <div class="image grow-on-hover">
-            <img title="e-mail" src="images/mail_logo.png" onclick="navigator.clipboard.writeText('vinegret43@ctemplar.com')"/>
+          <div class="image">
+            <div class="popup">Copied!</div>
+            <img class="grow-on-hover" title="e-mail" id='e-mail' src="images/mail_logo.png"
+              onclick="copy_to_clipboard('vinegret43@ctemplar.com', 'e-mail')"/>
           </div>
 
           <div class="text">vinegret43@ctemplar.com</div>
@@ -54,7 +60,7 @@
               <img title="Github" src="images/github_logo.png"/>
             </a>
           </div>
-          <div class="text">github.com/Vinegret43</div>
+          <div class="text">https://github.com/Vinegret43</div>
         </div>
       </div>
 
