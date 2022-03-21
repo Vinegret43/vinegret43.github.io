@@ -1,4 +1,22 @@
 
+@font-face {
+  font-family: _roboto;
+  font-weight: bold;
+  src: url("fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: _roboto;
+  font-weight: 100;
+  src: url("fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: _roboto;
+  font-weight: normal;
+  src: url("fonts/Roboto-Regular.ttf");
+}
+
 body {
   color: white;
 
@@ -6,11 +24,12 @@ body {
   padding: 0;
 
   background: url("images/background.jpg") no-repeat fixed;
+  font-family: _roboto;
 }
 
 h1 {
   font-size: 80px;
-  font-weight: lighter;
+  font-weight: 100;
 }
 
 li {
@@ -52,7 +71,7 @@ ol > li::before {
 
 .box {
   width: 42vw;
-  height: 1430px;
+  height: 1800px;
   margin-left: 29vw;
   margin-top: 10vh;
 
@@ -165,11 +184,53 @@ ol > li::before {
 
 .media-grid {
   grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  grid-row-gap: 0;
 }
 
 .media-grid p {
   font-size: 22px;
+}
+
+
+.images-grid {
+  grid-template-columns: auto auto;
+}
+
+.images-grid .gallery {
+  width: 18vw;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.images-grid .gallery-overlay {
+  position: absolute;
+  width: 18vw;
+  height: 18vw;
+  background-color: #0007;
+  opacity: 0;
+  transition: 0.3s all;
+}
+
+.images-grid .gallery-overlay:hover {
+  opacity: 100%;
+}
+
+.images-grid p {
+  color: white;
+  margin-top: 7.5vw;
+  font-weight: bold;
+}
+
+.images-grid .image-container {
+  height: 18vw;
+  display: flex;
+  align-items: center;
+}
+
+.images-grid img {
+  display: block;
+  max-height: none;
+  width: 18vw;
 }
 
 
@@ -240,7 +301,7 @@ ol > li::before {
 
   .box {
     width: 80vw;
-    height: 1070px;
+    height: 1470px;
     margin-left: 5vw;
     padding: 10px;
   }
@@ -276,6 +337,31 @@ ol > li::before {
     font-size: 12px;
   }
 
+  .images-grid {
+    justify-content: center;
+    grid-template-columns: auto auto;
+  }
+
+  .images-grid img {
+    width: 25vw;
+    max-height: none;
+  }
+
+  .images-grid .gallery {
+    width: 25vw;
+  }
+  .images-grid .image-container {
+    width: 25vw;
+    height: 25vw;
+  }
+  .images-grid .gallery-overlay {
+    width: 25vw;
+    height: 25vw;
+  }
+  .images-grid p {
+    margin-top: 11.5vw;
+  }
+
   /* On mobile fixed background may not work. This is the workaround */
   body:before {
     content: "";
@@ -307,7 +393,7 @@ ol > li::before {
   }
 
   .box {
-    height: 980px;
+    height: 1280px;
   }
 
   .grid a, .grid img, .grid .text, .grid p {
@@ -316,5 +402,9 @@ ol > li::before {
 
   .grid img {
     max-height: 30px;
+  }
+
+  .images-grid img {
+    max-height: none;
   }
 }
