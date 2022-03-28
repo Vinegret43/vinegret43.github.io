@@ -76,10 +76,10 @@ ol > li::before {
   margin-top: 10vh;
 
   padding: 20px;
-  border: 10px #0004 solid;
+  border: 10px transparent solid;
   border-radius: 30px;
 
-  background-color: #000A;
+  background-color: #0008;
 }
 
 .box-background {
@@ -117,7 +117,7 @@ ol > li::before {
   padding-left: 40px;
   border-radius: 10px;
 
-  background-color: #000C;
+  background-color: #0006;
   border: 1px #AAA solid;
 }
 
