@@ -24,6 +24,7 @@ body {
   padding: 0;
 
   background: url("images/background.jpg") no-repeat fixed;
+  background-size: cover;
   font-family: _roboto;
 }
 
@@ -71,7 +72,7 @@ ol > li::before {
 
 .box {
   width: 42vw;
-  height: 1800px;
+  height: 1770px;
   margin-left: 29vw;
   margin-top: 10vh;
 
@@ -127,12 +128,8 @@ ol > li::before {
   animation: flick 1s infinite;
 }
 
-
-.contacts {
-  padding-top: 0;
-}
-
 .contacts h5 {
+  margin-top: 5px;
   color: #CCC;
   margin-left: 10px;
 }
@@ -287,6 +284,12 @@ ol > li::before {
     font-size: 18px;
   }
 
+  h3 {
+    margin-top: 8px;
+    font-size: 16px;
+  }
+
+
   .language-box a {
     font-size: 15px;
   }
@@ -301,7 +304,7 @@ ol > li::before {
 
   .box {
     width: 80vw;
-    height: 1470px;
+    height: 1420px;
     margin-left: 5vw;
     padding: 10px;
   }
@@ -373,27 +376,23 @@ ol > li::before {
     height: 1080px;
     z-index: -2;
     background: url("images/background.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
   }
 }
 
 @media screen and (max-width: 600px) {
   h1 {
-    font-size: 30px;
+    font-size: 34px;
   }
   li {
     font-size: 14px;
   }
 
-  h3 {
-    font-size: 16px;
-  }
-
   .box {
-    height: 1280px;
+    width: 84vw;
+    height: 1210px;
+    margin-left: 4vw;
+    padding: 5px;
   }
 
   .grid a, .grid img, .grid .text, .grid p {
@@ -402,6 +401,10 @@ ol > li::before {
 
   .grid img {
     max-height: 30px;
+  }
+
+  .grid {
+    grid-column-gap: 40px;
   }
 
   .images-grid img {

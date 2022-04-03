@@ -71,6 +71,20 @@ a:hover {
   .image-grid {
     grid-template-columns: auto;
   }
+
+  /* On mobile fixed background may not work. This is the workaround */
+  body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: -2;
+    background: url("images/background.jpg") no-repeat center center;
+    background-size: cover;
+  }
 }
 
 @media screen and (max-width: 700px) {
