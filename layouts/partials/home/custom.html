@@ -1,0 +1,41 @@
+<style>
+
+.homepage-image {
+    margin: 4rem 0 1rem 0;
+}
+
+</style>
+
+{{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
+<article class="{{ if not .Site.Params.homepage.showRecent }}
+    h-full
+  {{ end }} flex flex-col items-center justify-center">
+  <header class="relative px-1 py-1 flex flex-col items-center mb-3">
+    {{ with .Site.Params.Author.image }}
+      {{ $authorImage := "" }}
+      {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+        {{ $authorImage = resources.GetRemote . }}
+      {{ else }}
+        {{ $authorImage = resources.Get . }}
+      {{ end }}
+      {{ if $authorImage }}
+        <img class="homepage-image" alt="{{ $.Site.Params.Author.name | default " Author" }}"
+          src="/img/logo.png" />
+      {{ end }}
+    {{ end }}
+    {{ with .Site.Params.Author.headline }}
+    <h2 class="homepage-headline text-xl text-neutral-500 dark:text-neutral-400">
+      {{ . | markdownify }}
+    </h2>
+    {{ end }}
+    <div class="mt-1 text-4xl">
+      {{ partialCached "author-links.html" . }}
+    </div>
+  </header>
+  <section class="prose dark:prose-invert w-full">{{ .Content }}</section>
+  <section class="prose dark:prose-invert w-full">
+    {{ partial "recent-articles/main.html" . }}
+  </section>
+</article>
+
+<script src="/js/custom.js"></script>
